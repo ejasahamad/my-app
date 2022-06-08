@@ -1,5 +1,8 @@
 package com.example.application.views.helloworld;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.example.application.views.MainLayout;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
@@ -25,7 +28,14 @@ public class HelloWorldView extends HorizontalLayout {
             Notification.show("Hello " + name.getValue());
         });
         sayHello.addClickShortcut(Key.ENTER);
-
+        CustomTable<Stud> sds = new CustomTable<Stud>();
+        sds.addColumn(Stud::getName).setHeader("First name").setKey("sdsd");
+        sds.addColumn(Stud::getRoll).setHeader("Roll").setKey("sdsdsd");
+        List<Stud> sss = new ArrayList<>();
+        sss.add(new Stud("sdsd",1));
+        sds.setItems(sss);
+        sds.addExportTable();
+        add(sds);
         setMargin(true);
         setVerticalComponentAlignment(Alignment.END, name, sayHello);
 

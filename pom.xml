@@ -102,6 +102,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+   <groupId>org.vaadin.haijian</groupId>
+   <artifactId>exporter</artifactId>
+   <version>3.0.1</version>
+</dependency>
+        <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-testbench</artifactId>
             <scope>test</scope>
